@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import PriceOption from '../PriceOption/PriceOption';
 
 const PriceOptions = () => {
@@ -82,13 +82,15 @@ const PriceOptions = () => {
         ];  
 
   return (
-    <div>
+    <div className='my-12 mx-2'>
         <h2 className='text-5xl'>Best Price In The Town</h2>
+        <div className='grid md:grid-cols-3 gap-6'>
         {
             priceOptions.map(option => <PriceOption key={option.id}
             option={option}
             ></PriceOption>)
         }
+        </div>
     </div>
   )
 }
