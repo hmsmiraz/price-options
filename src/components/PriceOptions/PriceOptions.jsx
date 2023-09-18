@@ -1,0 +1,100 @@
+import PropTypes from 'prop-types'
+import PriceOption from '../PriceOption/PriceOption';
+
+const PriceOptions = () => {
+
+        const priceOptions = [
+          {
+            "id": 1,
+            "name": "Basic Membership",
+            "features": [
+              "Access to gym facilities",
+              "Unlimited use of cardio equipment",
+              "Locker room access",
+              "Free weights area access"
+            ],
+            "price": 29.99
+          },
+          {
+            "id": 2,
+            "name": "Silver Membership",
+            "features": [
+              "Access to gym facilities",
+              "Unlimited use of cardio equipment",
+              "Locker room access",
+              "Free weights area access",
+              "Access to fitness classes"
+            ],
+            "price": 49.99
+          },
+          {
+            "id": 3,
+            "name": "Gold Membership",
+            "features": [
+              "Access to gym facilities",
+              "Unlimited use of cardio equipment",
+              "Locker room access",
+              "Free weights area access",
+              "Access to fitness classes",
+              "Personal trainer sessions (2/month)"
+            ],
+            "price": 69.99
+          },
+          {
+            "id": 4,
+            "name": "Platinum Membership",
+            "features": [
+              "Access to gym facilities",
+              "Unlimited use of cardio equipment",
+              "Locker room access",
+              "Free weights area access",
+              "Access to fitness classes",
+              "Personal trainer sessions (4/month)",
+              "Sauna and steam room access",
+              "Towel service"
+            ],
+            "price": 89.99
+          },
+          {
+            "id": 5,
+            "name": "Student Membership",
+            "features": [
+              "Access to gym facilities",
+              "Unlimited use of cardio equipment",
+              "Locker room access",
+              "Free weights area access"
+            ],
+            "price": 19.99
+          },
+          {
+            "id": 6,
+            "name": "Senior Membership",
+            "features": [
+              "Access to gym facilities",
+              "Unlimited use of cardio equipment",
+              "Locker room access",
+              "Free weights area access",
+              "Access to fitness classes",
+              "Silver Sneakers program"
+            ],
+            "price": 24.99
+          }
+        ];  
+
+  return (
+    <div>
+        <h2 className='text-5xl'>Best Price In The Town</h2>
+        {
+            priceOptions.map(option => <PriceOption key={option.id}
+            option={option}
+            ></PriceOption>)
+        }
+    </div>
+  )
+}
+
+PriceOptions.propTypes = {
+
+}
+
+export default PriceOptions
